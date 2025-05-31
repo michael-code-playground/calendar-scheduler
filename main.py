@@ -109,7 +109,7 @@ values = read_sheet(creds, SAMPLE_SPREADSHEET_ID, SAMPLE_RANGE_NAME)
 
 print("Events in sheet:")
 print()
-sheet_event_keys = {(format_date(value[1]), value[0]) for value in values}
+sheet_event_keys = {(format_date(value[1]), value[0]) for value in values if len(value) > 1}
 print(sheet_event_keys)
 print("Events to create:")
 print()
